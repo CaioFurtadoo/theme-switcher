@@ -1,0 +1,93 @@
+:root {
+	--dark: #292C35;
+	--light: #F1F1F1;
+	--label: #111;
+}
+
+.light
+{
+    --dark:  #F1F1F1;
+}
+
+body
+{
+    background-color: var(--dark);
+}
+
+#switch
+{
+    width: 235.38px;
+    height: 102px;
+    position: relative;
+    margin: auto;
+    margin-top: 285px;
+}
+
+#switch button
+{
+    position: absolute;
+    z-index: 1;
+    width: 86.31px;
+    height: 86.31px;
+    border-radius: 50%;
+    border: 0;
+    transform: translateY(-50%);
+    top: 50%;
+    margin-left: 10px;
+    margin-right: 10px;
+    right: 55%;
+    animation: slide-out 0.3s forwards;
+}
+
+.light #switch button
+{
+    animation: slide-in 0.3s forwards;
+}
+
+#switch span
+{
+    background-color: var(--label);
+    display: block;
+    width: 235.38px;
+    height: 102px;
+    border-radius: 9999px;
+}
+
+#moon
+{
+    width: 94.15px;
+    height: 94.15px;
+    margin-top: 4px;
+    margin-left: 2px;
+}
+
+#sun
+{
+    margin-top: 4px;
+    margin-left: 35px;
+    width: 94.15px;
+    height: 94.15px;
+}
+
+@keyframes slide-in
+{
+    from
+    {
+        left: 55%;
+    }
+    to
+    {
+        left: 0;
+    }
+}
+@keyframes slide-out
+{
+    from
+    {
+        left: 0;
+    }
+    to
+    {
+        left: 55%;
+    }
+}
